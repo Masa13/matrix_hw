@@ -17,13 +17,12 @@ m1 = [[100,100,100,100],
       [1,1,1,1]]
 #m1 = matrix_mult(make_translate(100,100,0),m0)
 i = 0
+x = 0
+y = 0
 while i < 10:
-     n = 0
      n = 0
      m2 = m0
      m3 = m1
-     x = 0
-     y = 0
      while n < 360:
           m2 = matrix_mult(make_translate(x,y,0),m2)
           m3 = matrix_mult(make_translate(x,y,0),m2)
