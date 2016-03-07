@@ -3,18 +3,38 @@ from draw import *
 from math import *
 
 screen = new_screen()
-color = [ 0, 255, 0 ]
+color1 = [ 0, 255, 0 ]
+color2 = [255,0,0]
 
 m0 = [[0,200,200,0],
      [100,0,0,100],
      [0,100,100,0],
      [1,1,1,1]]
 
-m1 = matrix_mult(make_translate(100,100,0),m0)
-m2 =  matrix_mult(make_rotX(pi),m0)
+m1 = [[100,100,100,100],
+      [200,200,0,0],
+      [0,0,300,300],
+      [1,1,1,1]]
+#m1 = matrix_mult(make_translate(100,100,0),m0)
 
-draw_lines(m0,screen,color)
-draw_lines(m1,screen,color)
-draw_lines(m2,screen,color)
+n = 0
+m2 = m0
+m3 = m1
+
+m2 = matrix_mult(make_translate(100,100,0),m2)
+m3 = matrix_mult(make_translate(100,100,0),m2)
+
+while n < 3600:
+    m2 = matrix_mult(make_rotX(pi/13),m2)
+    m3 = matrix_mult(make_scale(1.1,1.1,1),m2)  
+    draw_lines(m2,screen,color1)
+    draw_lines(m3,screen,color2)
+    n+=1
+
+
+    
+#draw_lines(m0,screen,color)
+#draw_lines(m1,screen,color)
+#draw_lines(m2,screen,color)
 
 display(screen)
