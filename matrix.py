@@ -1,4 +1,4 @@
-import math
+from math import *
 
 def make_translate( x, y, z ):
     return [[1,0,0,x],
@@ -13,23 +13,23 @@ def make_scale( x, y, z ):
             [0,0,0,1]]
     
 def make_rotX( theta ):   
-    t = radians(theta)
+    deg = radians(theta)
     return [[1,0,0,0],
-            [0,cos(t),-sin(t),0],
-            [0,sin(t),cos(t),0],
+            [0,cos(deg),-sin(deg),0],
+            [0,sin(deg),cos(deg),0],
             [0,0,0,1]]
 
 def make_rotY( theta ):
-    t = radians(theta)
-    return [[cos(t),0,-sin(t),0],
+    deg = radians(theta)
+    return [[cos(deg),0,-sin(deg),0],
             [0,1,0,0],
-            [sin(t),0,cos(t),0],
+            [sin(deg),0,cos(deg),0],
             [0,0,0,1]]
 
 def make_rotZ( theta ):
-    t = radians(theta)
-    return [[cos(t),-sin(t),0,0],
-            [sin(t),cos(t),0,0],
+    deg = radians(theta)
+    return [[cos(deg),-sin(deg),0,0],
+            [sin(deg),cos(deg),0,0],
             [0,0,1,0],
             [0,0,0,1]]
 
