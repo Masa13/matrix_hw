@@ -13,23 +13,20 @@ def make_scale( x, y, z ):
             [0,0,0,1]]
     
 def make_rotX( theta ):   
-    deg = radians(theta)
     return [[1,0,0,0],
-            [0,cos(deg),-sin(deg),0],
-            [0,sin(deg),cos(deg),0],
+            [0,cos(theta),-sin(theta),0],
+            [0,sin(theta),cos(theta,0],
             [0,0,0,1]]
 
 def make_rotY( theta ):
-    deg = radians(theta)
-    return [[cos(deg),0,-sin(deg),0],
+    return [[cos(theta),0,-sin(theta),0],
             [0,1,0,0],
-            [sin(deg),0,cos(deg),0],
+            [sin(theta),0,cos(theta),0],
             [0,0,0,1]]
 
 def make_rotZ( theta ):
-    deg = radians(theta)
-    return [[cos(deg),-sin(deg),0,0],
-            [sin(deg),cos(deg),0,0],
+    return [[cos(theta),-sin(theta),0,0],
+            [sin(theta),cos(theta),0,0],
             [0,0,1,0],
             [0,0,0,1]]
 
@@ -71,3 +68,35 @@ def matrix_mult( m1, m2 ):
             for i in range(len(m2)):
                 m[x][y] = m[x][y] + m1[x][i] * m2[i][y]
     return m
+    
+print_matrix(make_translate(1,2,3))
+print
+print_matrix(make_scale(4,5,6))
+print
+print_matrix(make_rotX(30))
+print
+print_matrix(make_rotY(90))
+print
+print_matrix(make_rotZ(180))
+print
+m1 = new_matrix(3,2)
+m2 = new_matrix(2,3)
+m1[0][0] = 1
+m1[0][1] = 2
+m1[0][2] = 3
+m1[1][0] = 4
+m1[1][1] = 5
+m1[1][2] = 6
+m2[0][0] = 7
+m2[0][1] = 8
+m2[1][0] = 9
+m2[1][1] = 10
+m2[2][0] = 11
+m2[2][1] = 12
+print_matrix(m1)
+print
+print_matrix(m2)
+print
+print_matrix(scalar_mult(m1,2))
+print
+print_matrix(matrix_mult(m1,m2))
