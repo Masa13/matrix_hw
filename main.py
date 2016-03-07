@@ -17,5 +17,4 @@ draw_lines(m0,screen,color)
 draw_lines(m1,screen,color)
 draw_lines(m2,screen,color)
 
-
 display(screen)
