@@ -30,6 +30,10 @@ while n < 360:
     draw_lines(m2,screen,color1)
     draw_lines(m3,screen,color2)
     n+=1
+
+n = 0
+m2 = m0
+m3 = m1
     
 m2 = matrix_mult(make_translate(100,100,0),m2)
 m3 = matrix_mult(make_translate(100,100,0),m2)
@@ -40,6 +44,10 @@ while n < 360:
     draw_lines(m2,screen,color1)
     draw_lines(m3,screen,color2)
     n+=1
+
+n = 0
+m2 = m0
+m3 = m1
 
 m2 = matrix_mult(make_translate(250,250,0),m2)
 m3 = matrix_mult(make_translate(250,250,0),m2)
