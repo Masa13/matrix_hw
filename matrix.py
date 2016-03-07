@@ -15,7 +15,7 @@ def make_scale( x, y, z ):
 def make_rotX( theta ):   
     return [[1,0,0,0],
             [0,cos(theta),-sin(theta),0],
-            [0,sin(theta),cos(theta,0],
+            [0,sin(theta),cos(theta),0],
             [0,0,0,1]]
 
 def make_rotY( theta ):
