@@ -17,7 +17,7 @@ m1 = [[100,100,100,100],
       [1,1,1,1]]
 #m1 = matrix_mult(make_translate(100,100,0),m0)
 i = 0
-while i < 500:
+while i < 10:
      n = 0
      n = 0
      m2 = m0
@@ -33,8 +33,8 @@ while i < 500:
           draw_lines(m2,screen,color1)
           draw_lines(m3,screen,color2)
           n+=1
-     x+=20
-     y+=20
+     x+=50
+     y+=50
      i+=1
 
     
